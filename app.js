@@ -23,11 +23,13 @@ const game = () => {
 
         options.forEach(option => {
             option.addEventListener('click', function(){
-                console.log(this);
+                const randomNumber = Math.floor(Math.random() * 3);
+                const computerChoice = computerOptions[randomNumber];
+            
             })
         });
 
-        const randomNumber = Math.floor(Math.random() * 3);
+        
     }
 
 
