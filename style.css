@@ -63,3 +63,9 @@ section{
     color: rgb(224, 224, 224);
     text-align: center;
 }
+
+.hands, .options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
