@@ -28,6 +28,10 @@ const game = () => {
                 const computerChoice = computerOptions[randomNumber];
                 //compare hands
 
+                //Update images
+                playerHand.src = `./assets/${this.textContent}.png`
+                computerHand.src = `./assets/${computerChoice}.png`
+
             });
         });
     };
