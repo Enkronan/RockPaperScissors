@@ -27,6 +27,7 @@ const game = () => {
                 const randomNumber = Math.floor(Math.random() * 3);
                 const computerChoice = computerOptions[randomNumber];
                 //compare hands
+                compareHands(this.textContent, computerChoice);
 
                 //Update images
                 playerHand.src = `./assets/${this.textContent}.png`
@@ -35,6 +36,13 @@ const game = () => {
             });
         });
     };
+
+    const updateScore = () => {
+        const playerScore = document.querySelector('.player-score p');
+        const computerScore = document.querySelector('.computer-score p');
+        playerScore.textContent = pScore;
+        computerScore.textContent = cScore;
+    }
 
     const compareHands = (playerChoice, computerChoice) => {
         const winner = document.querySelector('.winner');
@@ -47,9 +55,13 @@ const game = () => {
         if(playerChoice === 'rock'){
             if(computerChoice === 'scissors'){
                 winner.textContent = "Player wins";
+                pScore++;
+                updateScore();
                 return;
             }else{
                 winner.textContent = "Computer wins";
+                cScore++;
+                updateScore();
                 return;
             }
         }
@@ -57,9 +69,13 @@ const game = () => {
         if(playerChoice === 'scissors'){
             if(computerChoice === 'paper'){
                 winner.textContent = "Player wins";
+                pScore++;
+                updateScore();
                 return;
             }else{
                 winner.textContent = "Computer wins";
+                cScore++;
+                updateScore();
                 return;
             }
         }
@@ -67,9 +83,13 @@ const game = () => {
         if(playerChoice === 'paper'){
             if(computerChoice === 'rock'){
                 winner.textContent = "Player wins";
+                pScore++;
+                updateScore();
                 return;
             }else{
                 winner.textContent = "Computer wins";
+                cScore++;
+                updateScore();
                 return;
             }
         }
