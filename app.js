@@ -7,8 +7,6 @@ const game = () => {
         const introScreen = document.querySelector('.intro');
         const match = document.querySelector('.match');
 
-        console.log(introScreen);
-
         playButton.addEventListener('click', () => {
             introScreen.classList.add('fadeOut');
             match.classList.add('fadeIn');
@@ -21,11 +19,21 @@ const game = () => {
         const computerHand = document.querySelector('.computer-hand');
 
         //computer Options
+        const computerOptions = ['rock', 'paper', 'scissors'];
+
+        options.forEach(option => {
+            option.addEventListener('click', function(){
+                console.log(this);
+            })
+        });
+
+        const randomNumber = Math.floor(Math.random() * 3);
     }
 
 
     //call inner functions
     startGame();
+    playMatch();
 };
 
 game();
