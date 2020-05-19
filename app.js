@@ -15,6 +15,14 @@ const game = () => {
         });
     };
 
+    const playMatch = () => {
+        const options = document.querySelectorAll('.options button');
+        const playerHand = document.querySelector('.player-hand');
+        const computerHand = document.querySelector('.computer-hand');
+
+        //computer Options
+    }
+
 
     //call inner functions
     startGame();
